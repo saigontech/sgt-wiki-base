@@ -1,0 +1,43 @@
+.comment-reply-title {
+    font-size: large;
+}
+
+/* Comment form */
+.comment-respond {
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Leave a reply */
+.comment-reply-title {
+
+}
+
+textarea#comment {
+    width: 100%;
+    padding: 5px;
+    border: solid 1px orange;
+}
+
+.logged-in-as {
+    display: none;
+}
+.comment-form-comment label{
+    display: none;   
+}
+
+.form-submit {
+    margin-top: 5px;    
+}
+
+.form-submit input {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 9999px;
+    background-color: rgba(96, 165, 250, 1);
+}
+
+.form-submit input:hover {    
+    background-color: rgba(59, 130, 246, 1);
+}
