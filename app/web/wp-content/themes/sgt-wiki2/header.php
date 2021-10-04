@@ -18,8 +18,6 @@
     <div class="circle is-primary circle-3"></div>
     <div class="circle is-primary circle-4"></div>
     <div class="circle is-primary circle-5"></div>
-    <div class="circle is-primary circle-6"></div>
-    <div class="circle is-light circle-7"></div>
 
     <div class="bg-hero bg-no-repeat bg-cover">
         <!--   nav bar -->
