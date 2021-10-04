@@ -41,3 +41,9 @@ textarea#comment {
 .form-submit input:hover {    
     background-color: rgba(59, 130, 246, 1);
 }
+img.aligncenter {
+    margin: auto;
+}
+img.alignright {
+    margin: 0 0 0 auto;
+}
