@@ -1,9 +1,9 @@
 <!-- card -->
 <?php $cat = $args['category'] ?>
 <?php $posts = get_posts(array('posts_per_page' => 3, 'category' => $cat->cat_ID)); ?>
-<div class="px-5 py-5 border rounded shadow-md">
-    <p class="text-2xl mb-5"><?php echo $cat->name ?></p>
-    <ul class="mb-5">
+<div class="flex flex-col px-5 py-5 border rounded shadow-md">
+    <p class="flex-none text-2xl mb-5"><?php echo $cat->name ?></p>
+    <ul class="flex-grow mb-5">
         <?php foreach($posts as $post): ?>
             <li class="flex gap-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -16,6 +16,6 @@
         <?php endforeach; ?>	
     </ul>
 
-    <a class="block text-center mx-auto w-2/3 px-5 py-3 border border-green-400	rounded hover:border-red-400"
+    <a class="flex-none block text-center mx-auto w-2/3 px-5 py-3 border border-green-400	rounded hover:border-red-400"
         href="<?php echo get_category_link($cat->cat_ID) ?>" alt="Explore">View All</a>
 </div>
