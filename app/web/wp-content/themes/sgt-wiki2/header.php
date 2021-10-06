@@ -39,7 +39,7 @@
 
             <!--     search form -->
             <div class="my-5 flex justify-start text-2xl">
-                <input class="outline-none w-1/2 px-5 py-3 mx-auto border rounded-full" type="text"
+                <input class="outline-none w-full sm:w-1/2 px-5 py-3 mx-auto border rounded-full" type="text"
                     placeholder="keyword...">
             </div>
         </div>
