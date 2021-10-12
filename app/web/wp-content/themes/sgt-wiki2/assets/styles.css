@@ -31880,6 +31880,7 @@ h3 {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  opacity: 0.3;
 }
 
 .circle.circle-3 {
