@@ -2,7 +2,7 @@
 <?php $cat = $args['category'] ?>
 <?php $max_length = 50 ?>
 <?php $posts = get_posts(array('posts_per_page' => 3, 'category' => $cat->cat_ID)); ?>
-<div class="px-5 py-5 border rounded shadow-md relative">
+<div class="px-5 py-5 border rounded shadow-md">
     <p class="text-2xl mb-5"><?php echo $cat->name ?></p>
     <ul class="mb-5">
         <?php foreach($posts as $post): ?>
