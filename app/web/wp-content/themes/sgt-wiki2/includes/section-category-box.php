@@ -1,5 +1,6 @@
 <!-- card -->
 <?php $cat = $args['category'] ?>
+<?php $max_length = 50 ?>
 <?php $posts = get_posts(array('posts_per_page' => 3, 'category' => $cat->cat_ID)); ?>
 <div class="px-5 py-5 border rounded shadow-md">
     <p class="text-2xl mb-5"><?php echo $cat->name ?></p>
@@ -11,8 +12,14 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                <a class="hover:text-blue-300" href="<?php the_permalink($post->ID) ?>"><?php echo $post->post_title ?></a>
-            </li>            
+                <a class="hover:text-blue-300" href="<?php the_permalink($post->ID) ?>"><?php
+                    if (strlen($post->post_title) > $max_length)
+                    {
+                        $offset = ($max_length - 3) - strlen($post->post_title);
+                        $post->post_title = substr($post->post_title, 0, strrpos($post->post_title, ' ', $offset)) . '...';
+                    }
+                    echo $post->post_title ?></a>
+            </li>
         <?php endforeach; ?>	
     </ul>
 
