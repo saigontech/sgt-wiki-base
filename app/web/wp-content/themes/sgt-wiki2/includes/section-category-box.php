@@ -1,8 +1,16 @@
 <!-- card -->
 <?php $cat = $args['category'] ?>
+<!-- max length for category 3 lines in 15.6 inch -->
+<?php $max_length_for_category = 74 ?>
 <?php $posts = get_posts(array('posts_per_page' => 3, 'category' => $cat->cat_ID)); ?>
 <div class="px-5 py-5 border rounded shadow-md">
-    <p class="text-2xl mb-5"><?php echo $cat->name ?></p>
+    <p class="text-2xl mb-5"><?php
+        if (strlen($cat->name) > $max_length_for_category)
+        {
+            $offset = ($max_length_for_category - 3) - strlen($cat->name);
+            $cat->name = substr($cat->name, 0, strrpos($cat->name, ' ', $offset)) . '...';
+        }
+        echo $cat->name ?></p>
     <ul class="mb-5">
         <?php foreach($posts as $post): ?>
             <li class="flex gap-x-2">
