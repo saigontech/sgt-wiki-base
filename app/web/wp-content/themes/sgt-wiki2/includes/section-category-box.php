@@ -8,7 +8,7 @@
         if (strlen($cat->name) > $max_length_for_category)
         {
             $offset = ($max_length_for_category - 3) - strlen($cat->name);
-            $cat->name = substr($cat->name, 0, strrpos($cat->name, ' ', $offset)) . '..........';
+            $cat->name = substr($cat->name, 0, strrpos($cat->name, ' ', $offset)) . '...';
         }
         echo $cat->name ?></p>
     <ul class="mb-5">
